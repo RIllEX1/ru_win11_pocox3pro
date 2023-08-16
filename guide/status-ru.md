@@ -1,34 +1,34 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Pro
+# Запуск Windows на Poco X3 PRO
 
-## Project Status
+## Статус проекта
 
-The project is finished. Some improvements might be made, but there won't be any driver updates.
+Проект завершен. Тут будут изменения, но обновления драйверов не будет.
 
-#### Features
+#### Функционал
 
-- [ ] Audio ```Only by USB or Bluetooth```
-- [X] Battery status
+- [ ] Аудио ```Только по USB или Bluetooth```
+- [X] Статус батареи
 - [x] Bluetooth
-- [x] Brightness
-- [ ] Camera
-- [x] Cellular ```Only SIM1; requires provisioning before every boot; calling doesn't work```
-- [ ] Charging ```VERY slow```
-- [x] Display
-- [x] GPU
-- [ ] SD ```Takes several attempts to be recognized and is very unstable```
-- [x] Touchscreen
+- [x] Яркость
+- [ ] Камера
+- [x] Мобильные данные ```Только сим карта в первом слоте; требует обеспечение каждый перезапуск; звонки не работают```
+- [ ] Зарядка ```ОЧЕНЬ медленно```
+- [x] Экран
+- [x] Видеопроцессор
+- [ ] Карта памяти ```Нужны несколько попыток чтобы она отобразилась, и то не стабильно```
+- [x] Касание пальцем ```Касание работает замечательно, как на обычном Android```
 - [x] UFS
 - [x] USB
 - [x] Wi-Fi
 
-#### Sensors
-- [x] Accelerometer
-- [ ] Fingerprint
+#### Сенсоры
+- [x] Акселератор
+- [ ] Отпечаток пальца
 - [x] GPS
-- [x] Gyroscope
-- [x] Light sensor
-- [x] Magnetometer
-- [x] Proximity
+- [x] Гироскоп
+- [x] Датчик света
+- [x] Магнитометер
+- [x] Датчик лица (Proximity) ```Для включения экрана```
