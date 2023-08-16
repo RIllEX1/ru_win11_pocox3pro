@@ -21,7 +21,7 @@
 - [Решение проблем](guide/troubleshooting-ru.md)
 
 
-## Miscellaneous
+## Дополнительное
 
 - [Установка ДуалБут](guide/dualboot-ru.md)
 
@@ -31,7 +31,7 @@
 
 - [Инструкция по удалению](guide/uninstall-ru.md)
 
-## Contributors
+## Создатели
 
 [<img alt="adomerlee" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109386069?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/adomerlee)
 [<img alt="Morc" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/13377926?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/TheMorc)
