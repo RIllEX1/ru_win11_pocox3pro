@@ -23,7 +23,7 @@
 
 ## Miscellaneous
 
-- [Установка переключения между системами](guide/dualboot-en.md)
+- [Установка ДуалБут](guide/dualboot-en.md)
 
 - [Опциональные вещи для установки](guide/postinstall-en.md)
 
