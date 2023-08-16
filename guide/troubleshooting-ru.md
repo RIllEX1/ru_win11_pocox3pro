@@ -1,37 +1,37 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Pro
+# Запуск Windows на Poco X3 PRO
 
-## Troubleshooting Issues
+## Решение проблем
 
 
-## Device can boot into android but not bootloader
+## Телефон может загружаться в Android но не в Bootloader
 
-### Prerequisites:
+### Файлы:
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-This is caused by partitions with volume names the bootloader cannot handle, to fix this:
+Это изза разделов с названиями томов которые Bootloader не может выдержать, чтобы починить:
 
-- Boot to recovery
+- Загрузитесь в Рекавери
 
-- Connect phone to PC
+- Подключите телефон к ПК
 
-- Open cmd on PC
+- Откройте ADB на ПК
 
-- Run ```adb shell```
+- Введите ```adb shell```
 
-- Run ```parted```
+- Введите ```parted```
 
-- Run ```print``` to list all partitions
+- Введите ```print``` чтобы отобразить все разделы
 
-- Look for partitions that have spaces in the names e.g "Basic Data Partition" and note their volume number
+- Посмотрите на разделы которые имеют в названии пробелы. Пример: "Обычный раздел с файлами" и запомните их число тома
 
-- Now run ```rm <vol number>``` e.g ```rm 36```
+- Запустите и вместо <число тома> поставьте число которое вы увидели ранее: ```rm <число тома>``` Пример: ```rm 36```
 
 
 
-## Touchscreen touches are inaccurate/upside down
+## Касания пальцем не правильные/перевернутые
 
-You picked the wrong definitions file while installing drivers.
+Вы выбрали неправильные файл-определение при установке драйверов.
