@@ -23,13 +23,13 @@
 
 ## Miscellaneous
 
-- [Установка ДуалБут](guide/dualboot-en.md)
+- [Установка ДуалБут](guide/dualboot-ru.md)
 
-- [Опциональные вещи для установки](guide/postinstall-en.md)
+- [Опциональные вещи для установки](guide/postinstall-ru.md)
 
-- [Инструкция по обновлению драйверов](guide/update-en.md)
+- [Инструкция по обновлению драйверов](guide/update-ru.md)
 
-- [Инструкция по удалению](guide/uninstall-en.md)
+- [Инструкция по удалению](guide/uninstall-ru.md)
 
 ## Contributors
 
