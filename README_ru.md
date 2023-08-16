@@ -5,7 +5,7 @@
 
 Языки инструкций:
 
-[Английский](README.md) **|** [Русский (NxORi)](README_ru.md)
+[English](README.md) **|** [Русский (NxORi)](README_ru.md)
 
 *(Русский - Переведено NxORi / aka: RIllEX, !. (telegram - @chichus))*
 
