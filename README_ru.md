@@ -1,11 +1,13 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Запуск Windows на Poco X3 PRO (Переведено NxORi / aka: RIllEX, !. (telegram - @chichus)) 
+# Запуск Windows на Poco X3 PRO
 
 Языки инструкций:
 
 [Английский](README.md) **|** [Русский (NxORi)](README_ru.md)
+
+*(Русский - Переведено NxORi / aka: RIllEX, !. (telegram - @chichus))*
 
 ## ⚠️ Предупреждение (ОБЯЗАТЕЛЬНО)
 
