@@ -1,51 +1,51 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Pro
+# Запуск Windows на Poco X3 PRO
 
-## Uninstallation
+## Удаление
 
-### Why is this needed?
+### Почему оно пригодится?
 
-If you have followed the old guide your partition order will be too different and may have some consequences if you dont restore your stock partition table.
+Если вы соблюдали старую инструкцию, ваш раздел будет совсем другой и может иметь последствия если вы не восстановите стоковую таблицу разделов.
 
-If you want to uninstall windows this is used instead of deleting partitions manually to avoid human error + writing a whole dedicated guide to just uninstalling.
+Если вы хотите удалить Windows это пригодится вместо удаления разделов вручную и без человеческих ошибок + написание полной инструкции по удалению.
 
-If you want to relock your bootloader you'll need your partition table to be stock.
+Если вы хотите "восстановить" телефон в обычное состояние и заблокировать Bootloader обратно, то вам нужна стоковая таблица разделов.
 
-### Prerequisites
+### Файлы для установки
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
-- [gpt_both0.bin](../../../releases/tag/binaries) (old method)
-- [Modded TWRP/OFOX](../../../releases/Recoveries) (new method)
+- [gpt_both0.bin](../../../releases/tag/binaries) (старый метод)
+- [Модифицированный TWRP/OFOX](../../../releases/Recoveries) (новый метод)
 
-#### New method
+#### Новый метод
 
-##### Flash and boot modified recovery
+##### Установите и запустите модифицированное рекавеки через ADB 
 
 ```cmd
-fastboot flash recovery path\to\twrp.img 
+fastboot flash recovery путь\до\twrp.img 
 fastboot reboot recovery
 ```
 
-##### Execute the restore script
+##### Запустите восстанавливающий скрипт
 
 ```cmd
 adb shell restore
 ```
 
-##### Done!
+##### Готово!
 
-#### Old method (in case the new one didn't work)
+#### Старый метод (Если новый метод не работает в вашей ситуации)
 
-##### Restore GPT
-> Replace ```path\to\gpt_both0.bin``` with the path to the gpt_both0.bin file.
+##### Восстановите GPT (Таблица разделов)
+> Замените ```путь\до\gpt_both0.bin``` актуальным путем где находится gpt_both0.bin файл.
 
 ```cmd
-fastboot flash partition:0 path\to\gpt_both0.bin
+fastboot flash partition:0 путь\до\gpt_both0.bin
 ```
 
-##### Erase userdata to avoid bootloop and restore FS size
+##### Очистите userdata чтобы не было БутЛупов и восстановите FS размер
 ```cmd
 fastboot -w
 ```
