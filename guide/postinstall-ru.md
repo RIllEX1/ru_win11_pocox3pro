@@ -1,98 +1,98 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Pro
+# Запуск Windows на Poco X3 PRO
 
-## Optional post-install stuff
+## Опциональные вещи для установки
 
 
-### Provisioning the modem manually
+### Настройка модема вручную
 
-> [!WARNING]  
-> You will need to do this every time before you boot Windows if you want LTE!
+> [!ПРЕДУПРЕЖДЕНИЕ]  
+> Вам НАДО делать это каждый раз как вы запускаете Windows если вы хотите LTE (4G) соединение!
 
-#### Prerequisites
+#### Файлы
 
-- [Modded TWRP](../../../releases/Recoveries)
+- [Модифицированный TWRP](../../../releases/Recoveries)
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-##### Flash and boot modded recovery
+##### Установите и запуститесь в модифицированное рекавери
 
-```fastboot flash recovery path\to\twrp.img reboot recovery```
+```fastboot flash recovery путь\до\twrp.img reboot recovery```
 
-##### Mounting partitions
+##### Распределение раздела
 
-- Go to the mount menu
-- Mount the partition win
+- Зайдите в mount меню
+- Монтируйте раздел с Windows
 
-##### Provisioning the modem
+##### Настройка модема
 
-###### Start ADB Shell
+###### Запустите ADB Shell
 
 ```adb shell```
 
-###### Finding the modem folder
+###### Найдите папку модема
 
-> Take note of the random data in that folder name (after qcremotefs8150)
+> Запомните случайное инфо в названии папки (после qcremotefs8150)
 
 ```ls /win/Windows/System32/DriverStore/FileRepository/ | grep qcremotefs8150```
 
-###### Dump modem data
+###### Сделайте дамп инфо о модеме
 
-> Just like before, replace the random data with the one that you noted down before
+> Как до этого, замените случайное инфо этим что вы запомнили ранее
 
-> Make sure you do BOTH commands
+> Проверьте ВВЕЛИ ЛИ ВЫ обе команды
 
-```dd if=/dev/block/by-name/modemst1 of=/win/Windows/System32/DriverStore/FileRepository/qcremotefs8150_[insert random data here]/bootmodem_fs1```
+```dd if=/dev/block/by-name/modemst1 of=/win/Windows/System32/DriverStore/FileRepository/qcremotefs8150_[вставьте случайное инфо сюда]/bootmodem_fs1```
 
-```dd if=/dev/block/by-name/modemst2 of=/win/Windows/System32/DriverStore/FileRepository/qcremotefs8150_[insert random data here]/bootmodem_fs2```
+```dd if=/dev/block/by-name/modemst2 of=/win/Windows/System32/DriverStore/FileRepository/qcremotefs8150_[вставьте случайное инфо сюда]/bootmodem_fs2```
 
-## Finished!
-
-
-
-
-### Making the keyboard float
-
-> [!WARNING]  
-> Make sure these steps are done on the POCO X3 Pro running Windows!
-
-##### Opening the command prompt
-
-- Go to the start menu
-- Search command prompt
-- Hold the command prompt application and run it as administrator
-- Approve any UAC dialogs
-
-##### Making the keyboard float
-
-- In the command prompt put ```reg delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Scaling /v MonitorSize```
-- Press 'y' then enter
-- Reboot your phone
-
-## Finished!
+## Готово!
 
 
 
 
-### Disabling USB Host mode
+### Делаем клавиатуру отцепляемой и двигаемой
 
-> [!WARNING]
->  Any non powered hub will STOP working!
+> [!ПРЕДУПРЕЖДЕНИЕ]  
+> Делайте эти действия на POCO X3 Pro с запущенной Windows!!!
+
+##### Открытие командной строки
+
+- Откройте пуск
+- Напишите в поиск cmd/командная строка
+- Зажмите кнопку на командной строке и нажмите "ЗАПУСТИТЬ ОТ ИМЕНИ АДМИНИСТРАТОРА"
+- Подтвердите диалоги UAC о открытии от имени администратора
+
+##### Делаем клавиатуру двигаемой
+
+- В командной строке напишите ```reg delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Scaling /v MonitorSize```
+- Нажмите 'y' и потом Enter
+- Перезапустите телефон (В Windows!)
+
+## Готово!
+
+
+
+
+### Отключение режима хоста USB
+
+> [!ПРЕДУПРЕЖДЕНИЕ]
+>  Любые не запитанные USB разветлители/hub'ы не будут работать!
 >
-> Make sure these steps are done on the POCO X3 Pro running Windows!
+> Все действия делаются на POCO X3 Pro с запущенной Windows!
 
-##### Opening the command prompt
+##### Открытие командной строки
 
-- Go to the start menu
-- Search command prompt
-- Hold the command prompt application and run it as administrator
-- Approve any UAC dialogs
+- Откройте пуск
+- Напишите в поиск cmd/командная строка
+- Зажмите кнопку на командной строке и нажмите "ЗАПУСТИТЬ ОТ ИМЕНИ АДМИНИСТРАТОРА"
+- Подтвердите диалоги UAC о открытии от имени администратора
 
-##### Disabling USB host mode
+##### Отключение режима хоста USB
 
-- In the command prompt put ```reg add "HKLM\SYSTEM\CurrentControlSet\Enum\ACPI\QCOM0597\0\Device Parameters" /v RoleSwitchMode /t REG_DWORD /d 3```
-- Reboot your phone
+- В командную строку напишите ```reg add "HKLM\SYSTEM\CurrentControlSet\Enum\ACPI\QCOM0597\0\Device Parameters" /v RoleSwitchMode /t REG_DWORD /d 3```
+- Перезапустите телефон (В Windows!)
 
-## Finished!
+## Готово!
