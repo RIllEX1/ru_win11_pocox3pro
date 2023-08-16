@@ -1,25 +1,25 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Pro
+# Запуск Windows на Poco X3 PRO
 
-## Installation
+## Установке
 
-## Installing Windows
+## Установка Windows
 
-### Prerequisites
+### Файлы
 
-- [Windows on ARM image (Windows 11 is recommended)](https://uupdump.net/)
-- [UEFI image](https://github.com/woa-vayu/edk2-msm/releases/latest)
-- [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
-- [Drivers](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
-- [Modified TWRP](../../../releases/Recoveries) (should already be installed)
+- [Windows на ARM образе (Windows 11 рекомендована)](https://uupdump.net/)
+- [UEFI образ](https://github.com/woa-vayu/edk2-msm/releases/latest)
+- [ОбновлениеДрайверов.exe](https://github.com/WOA-Project/DriverUpdater/releases/latest)
+- [Драйвера](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
+- [Модифицированный TWRP](../../../releases/Recoveries) (должно быть уже установлено)
 
-#### Boot into TWRP
+#### Запуститесь в TWRP
 
-#### Execute the msc script
+#### Запустите MSC скрипт
 
-> If it asks you to run it once again, do so
+> Если просит запустить еще раз, сделайте это.
 
 ```cmd
 adb shell msc
@@ -27,49 +27,49 @@ adb shell msc
 
   
 
-### Assign letters to disks
+### Привяжите букву к тому
   
 
-#### Start the Windows disk manager
+#### Запустите Управление дисками Windows
 
-> Once the X3 Pro is detected as a disk
-> (if it isn't, replug the device)
+> Когда X3 Pro отображается как диск
+> (если нет, переподключите его)
 
 ```cmd
 diskpart
 ```
 
 
-### Assign `X` to Windows volume
+### Привяжите букву `X` на том Windows'а
 
-#### Select the Windows volume of the phone
-> Use `list volume` to find it, it's the one named "WINVAYU"
+#### Выберите том Windows телефона
+> Используйте `list volume` чтобы найти его, он называется "WINVAYU"
 
 ```diskpart
 select volume <number>
 ```
 
-#### Assign the letter X
+#### Привяжите "X" к тому
 ```diskpart
 assign letter x
 ```
 
-### Assign `Y` to esp volume
+### Привяжите "Y" к загрузочному тому
 
-#### Select the ESP volume of the phone
-> Use `list volume` to find it, it's the one named "ESPVAYU"
+#### Выберите загрузочный том
+> Используйте `list volume` чтобы найти его, он называется "ESPVAYU"
 
 ```diskpart
 select volume <number>
 ```
 
-#### Assign the letter Y
+#### Привяжите букву "Y"
 
 ```diskpart
 assign letter y
 ```
 
-#### Exit diskpart
+#### Выйти из diskpart
 ```diskpart
 exit
 ```
@@ -77,33 +77,33 @@ exit
   
   
 
-### Install
+### Установка
 
-> Replace `path\to\install.wim` with the actual path to install.wim,
+> Замените `путь\до\install.wim` актуальным путем до install.wim,
 
-> `install.wim` is located in sources folder inside your ISO
-> (it might also be named `install.esd`)
-> You can get it either by mounting or extracting the ISO
+> `install.wim` находится ISO
+> (также оно может называться `install.esd`)
+> Вы можете их получить через ISO образ системы
 
 ```cmd
 dism /apply-image /ImageFile:path\to\install.wim /index:1 /ApplyDir:X:\
 ```
 
-### Check what type of panel you have
+### Проверьте какой тип панели у вас стоит
 
-> Open cmd
+> Откройте cmd/командная строка
 
 ```cmd
 adb shell "dmesg | grep dsi_display_bind"
 ```
-> If your panel is `Tianma`, it will show `dsi_j20s_36_02_0a_video_display`
+> Если ваша панель: `Tianma`, то оно названо `dsi_j20s_36_02_0a_video_display`
 
-> If your panel is `Huaxing`, it will show `dsi_j20s_42_02_0b_video_display`
+> Если ваша панель: `Huaxing`, то оно названо `dsi_j20s_42_02_0b_video_display`
 
-### Install Drivers
+### Установка драйверов
 
-> Replace `path\to\drivers` with the actual location of the drivers folder
-> Replace `paneltype` with the actual panel type (tianma/huaxing)
+> Замените `path\to\drivers` на актуальную папку с драйверами
+> Замените `paneltype` на актульный тип панели (tianma/huaxing)
 
 ```cmd
 .\driverupdater.exe -d path\to\drivers\definitions\Desktop\ARM64\Internal\vayu_paneltype.txt -r path\to\drivers -p X:
@@ -111,7 +111,7 @@ adb shell "dmesg | grep dsi_display_bind"
 
   
 
-### Create Windows bootloader files
+### Создайте Windows bootloader файлы
 
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
@@ -120,78 +120,77 @@ bcdboot X:\Windows /s Y: /f UEFI
   
   
 
-## Allow unsigned drivers
+## Разрешить неподписанные драйвера
 
-> If you don't do this you'll get a BSOD
+> Если вы это не сделайте, у вас будут синие экраны смерти
 
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 ```
 
-### Unssign disk letters
+### Отвяжите буквы от томов
   
-> So that they don't stay there after disconnecting the device
+> Так они не останутся тут после отключение телефона
 
 ```cmd
 diskpart
 ```
 
 
-#### Select the Windows volume of the phone
-> Use `list volume` to find it, it's the one named "WINVAYU"
+#### Выберите том Windows телефона
+> Используйте `list volume` чтобы найти его, он называется "WINVAYU"
 
 ```diskpart
 select volume <number>
 ```
 
-#### Unassign the letter X
+#### Отвяжите букву "X"
 ```diskpart
 remove letter x
 ```
 
-#### Select the ESP volume of the phone
-> Use `list volume` to find it, it's the one named "ESPVAYU"
+#### Выберите загрузочный том телефона
+> Используйте `list volume` чтобы найти его, он называется "ESPVAYU"
 
 ```diskpart
 select volume <number>
 ```
 
-#### Unassign the letter Y
-
+#### Отвяжите букву "Y"
 ```diskpart
 remove letter y
 ```
 
-#### Exit diskpart
+#### Выйти из diskpart
 ```diskpart
 exit
 ```
 
-## Boot into Windows
+## Запуститесь в Windows
 
-### Move the `<uefi.img>` file to the device
+### Переместите `<uefi.img>` файл на телефон
 
 ```cmd
 adb push <uefi.img> /sdcard
 ```
 
-#### if you have a microSD card use this
+#### Если у вас есть карта памяти то используйте
 
 ```cmd
 adb push <uefi.img> /external_sd
 ```
 
 
-### Make a backup of your existing boot image
-> You need to do it just once
+### Сделайте бекап вашего основного образа
+> Надо сделать **1 РАЗ!!!**
 
-> Put it to the microSD card if possible
+> Переместите его на карту памяти, если это возможно
 
 
-### Flash the uefi image from TWRP
-Navigate to the `uefi.img` file and flash it into boot
+### Установите uefi образ через TWRP
+Перейдите в `uefi.img` файл и установите его в TWRP
 
-## Boot back into Android
-> Use your backup boot image from TWRP
+## Запуститесь в Android
+> Используйте ваше бекап образ через TWRP
 
-## Finished!
+## Готово!
