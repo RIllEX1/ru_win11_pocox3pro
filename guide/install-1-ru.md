@@ -1,49 +1,49 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
 
-# Running Windows on the POCO X3 Pro
+# Запуск Windows на POCO X3 PRO
 
-## Installation
+## Установка
 
-## Partitioning your device
+## Разделивание телефона
 
-### Prerequisites
+### Файлы
 
-- [Modified TWRP](../../../releases/Recoveries)
+- [Модифицированный TWRP](../../../releases/Recoveries)
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-### Notes
-> [!WARNING]  
-> If you ever delete any partitions via diskpart, Windows will send a UFS command which would erase the entire UFS storage!
+### Запись
+> [Предупреждение]  
+> Если вы хоть раз удалите раздел через diskpart, Windows отправить UFS команду которая удаляет ВСЁ UFS ХРАНИЛИЩЕ!!!
 > 
-> All your data will be erased! Backup now if needed.
+> Все файлы удалятся! Сделайте бекап (восстановление).
 > 
-> Do not run the same command twice.
+> Не запускайте одну команду дважды.
 > 
-> DO NOT REBOOT YOUR PHONE if you think you made a mistake, ask for help in the [Telegram chat](https://t.me/winonvayualt).
+> НЕ ПЕРЕЗАПУСКАЙТЕ ВАШ ТЕЛЕФОН если вы думаете что вы сделали ошибку, спросите за помощью в нашем телеграмм чате [Телеграмм чат](https://t.me/winonvayualt).
 > 
 >
-> Do not run all commands at once, execute them in order!
+> Не запускайте команды в разброс, вводите их по очереди!
 >
-> YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
+> ТЕЛЕФОН МОЖЕТ ЛЕГКО СЛОМАТЬСЯ ЕСЛИ ВЫ ВВЕДЕТЕ ИХ В НЕПРАВИЛЬНОМ ПОРЯДКЕ!!!
 
-##### Flash the modified TWRP recovery
+##### Установите модифицированный TWRP
 ```cmd
 fastboot flash recovery path\to\twrp.img
 fastboot reboot recovery
 ```
 
-##### Run the partitioning script
+##### Запустите разделительный скрипт
 
-> If it asks you to run it once again, do so
+> Если попросит запустить еще раз, сделайте это
 
 ```cmd
 adb shell partition
 ```
 
-#### Check if Android still starts
-Just restart the phone, and see if Android still works
+#### Посмотрите, запускается ли Android после этих действий
+Простой перезапуск телефона, если у вас запустится Android и можно им пользоваться, запускать приложения и тд, то вы сделали все правильно
 
 
-## [Next step: Installing Windows](/guide/install-2-en.md)
+## [Следующие этапы: Installing Windows](/guide/install-2-en.md)
