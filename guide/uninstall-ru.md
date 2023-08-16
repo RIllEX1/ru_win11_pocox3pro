@@ -17,7 +17,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 - [gpt_both0.bin](../../../releases/tag/binaries) (старый метод)
-- [Модифицированный TWRP/OFOX](../../../releases/Recoveries) (новый метод)
+- [Модифицированный TWRP](../../../releases/Recoveries) (новый метод)
 
 #### Новый метод
 
