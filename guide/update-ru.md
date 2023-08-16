@@ -8,7 +8,7 @@
 ### Файлы для установки
 
 - [UEFI](https://github.com/woa-vayu/edk2-msm/releases/latest)
-- [Модифицированный TWRP/OFOX](../../../releases/Recoveries)
+- [Модифицированный TWRP](../../../releases/Recoveries)
 - [Автоматически обновитель драйверов](https://github.com/WOA-Project/DriverUpdater/releases/latest)
 - [Драйвера](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
 
