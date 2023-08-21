@@ -9,7 +9,7 @@
 
 ### Файлы
 
-- [Модифицированный TWRP](../../../releases/Recoveries)
+- [Модифицированный TWRP](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries)
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
