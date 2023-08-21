@@ -13,7 +13,7 @@
 - [UEFI образ](https://github.com/woa-vayu/edk2-msm/releases/latest)
 - [ОбновлениеДрайверов.exe](https://github.com/WOA-Project/DriverUpdater/releases/latest)
 - [Драйвера](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
-- [Модифицированный TWRP](../../../releases/Recoveries) (должно быть уже установлено)
+- [Модифицированный TWRP](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries) (должно быть уже установлено)
 
 #### Запуститесь в TWRP
 
