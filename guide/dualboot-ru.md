@@ -14,13 +14,13 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Модицированный TWRP (Другие не подойдут!!!)](../../../releases/Recoveries)
+- [Модицированный TWRP (Другие не подойдут!!!)](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries)
 
-- [NTFS Android Magisk модуль](../../../releases/ntfsdroid)
+- [NTFS Android Magisk модуль](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/ntfsdroid)
 
 - [UEFI](https://github.com/woa-vayu/edk2-msm/releases/latest)
 
-- [UEFI & Android приложение для установки](../../../releases/dualboot)
+- [UEFI & Android приложение для установки](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/dualboot)
 
 ### Настройка телефона
 
