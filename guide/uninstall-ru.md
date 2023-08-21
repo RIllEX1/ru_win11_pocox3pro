@@ -16,8 +16,8 @@
 ### Файлы для установки
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
-- [gpt_both0.bin](../../../releases/tag/binaries) (старый метод)
-- [Модифицированный TWRP](../../../releases/Recoveries) (новый метод)
+- [gpt_both0.bin](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/binares) (старый метод)
+- [Модифицированный TWRP](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries) (новый метод)
 
 #### Новый метод
 
