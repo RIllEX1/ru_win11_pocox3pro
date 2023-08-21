@@ -3,23 +3,23 @@
 
 # Запуск Windows на Poco X3 PRO
 
-## Установке
+## Установка
 
 ## Установка Windows
 
 ### Файлы
 
-- [Windows на ARM образе (Windows 11 рекомендована)](https://uupdump.net/)
-- [UEFI образ](https://github.com/woa-vayu/edk2-msm/releases/latest)
-- [ОбновлениеДрайверов.exe](https://github.com/WOA-Project/DriverUpdater/releases/latest)
-- [Драйвера](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
-- [Модифицированный TWRP](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries) (должно быть уже установлено)
+- [Образ Windows для ARM (рекомендуется Windows 11)](https://uupdump.net/)
+- [Образ UEFI](https://github.com/woa-vayu/edk2-msm/releases/latest)
+- [DriverUpdater](https://github.com/WOA-Project/DriverUpdater/releases/latest)
+- [Драйверы](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
+- [Модифицированный TWRP](../../../releases/Recoveries) (должно быть уже установлено)
 
-#### Запуститесь в TWRP
+#### Загрузитесь в TWRP
 
-#### Запустите MSC скрипт
+#### Запустите скрипт MSC
 
-> Если просит запустить еще раз, сделайте это.
+> Если скрипт попросит запустить его еще раз, то так и сделайте
 
 ```cmd
 adb shell msc
@@ -30,46 +30,46 @@ adb shell msc
 ### Привяжите букву к тому
   
 
-#### Запустите Управление дисками Windows
+#### Запустите diskpart
 
-> Когда X3 Pro отображается как диск
-> (если нет, переподключите его)
+> После того, как телефон определится как диск
+> (если не определяется, переподключите его)
 
 ```cmd
 diskpart
 ```
 
 
-### Привяжите букву `X` на том Windows'а
+### Присвойте букву `X` тому Windows
 
-#### Выберите том Windows телефона
+#### Выберите том Windows на телефоне
 > Используйте `list volume` чтобы найти его, он называется "WINVAYU"
 
 ```diskpart
 select volume <number>
 ```
 
-#### Привяжите "X" к тому
+#### Присвойте "X" тому
 ```diskpart
 assign letter x
 ```
 
-### Привяжите "Y" к загрузочному тому
+### Присвойте букву "Y" загрузочному тому
 
-#### Выберите загрузочный том
+#### Выберите загрузочный том телефона
 > Используйте `list volume` чтобы найти его, он называется "ESPVAYU"
 
 ```diskpart
 select volume <number>
 ```
 
-#### Привяжите букву "Y"
+#### Присвойте букву "Y"
 
 ```diskpart
 assign letter y
 ```
 
-#### Выйти из diskpart
+#### Выйдите из diskpart
 ```diskpart
 exit
 ```
@@ -79,31 +79,29 @@ exit
 
 ### Установка
 
-> Замените `путь\до\install.wim` актуальным путем до install.wim,
+> Замените `path\to\install.wim` на действительный путь до install.wim,
 
-> `install.wim` находится ISO
-> (также оно может называться `install.esd`)
-> Вы можете их получить через ISO образ системы
+> `install.wim` находится в папке `sources` внутри вашего ISO
+> (также он может называться `install.esd`)
+> Его можно получить смонтировав или распаковав ISO образ
 
 ```cmd
 dism /apply-image /ImageFile:path\to\install.wim /index:1 /ApplyDir:X:\
 ```
 
-### Проверьте какой тип панели у вас стоит
-
-> Откройте cmd/командная строка
+### Узнайте тип установленного экрана
 
 ```cmd
 adb shell "dmesg | grep dsi_display_bind"
 ```
-> Если ваша панель: `Tianma`, то оно названо `dsi_j20s_36_02_0a_video_display`
+> Если ваша экран `Tianma`, то будет написано `dsi_j20s_36_02_0a_video_display`
 
-> Если ваша панель: `Huaxing`, то оно названо `dsi_j20s_42_02_0b_video_display`
+> Если ваша экран `Huaxing`, то будет написано `dsi_j20s_42_02_0b_video_display`
 
-### Установка драйверов
+### Установите драйверы
 
-> Замените `path\to\drivers` на актуальную папку с драйверами
-> Замените `paneltype` на актульный тип панели (tianma/huaxing)
+> Замените `path\to\drivers` на действительный путь к папке с драйверами
+> Замените `paneltype` на тип вашего экрана (tianma/huaxing)
 
 ```cmd
 .\driverupdater.exe -d path\to\drivers\definitions\Desktop\ARM64\Internal\vayu_paneltype.txt -r path\to\drivers -p X:
@@ -111,7 +109,7 @@ adb shell "dmesg | grep dsi_display_bind"
 
   
 
-### Создайте Windows bootloader файлы
+### Создайте файлы загрузчика Windows
 
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
@@ -120,9 +118,9 @@ bcdboot X:\Windows /s Y: /f UEFI
   
   
 
-## Разрешить неподписанные драйвера
+## Разрешение неподписанных драйверов
 
-> Если вы это не сделайте, у вас будут синие экраны смерти
+> Если вы этого не сделайте, то система не загрузится
 
 ```cmd
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
@@ -130,14 +128,14 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
 
 ### Отвяжите буквы от томов
   
-> Так они не останутся тут после отключение телефона
+> Чтобы они не остались после отключения телефона
 
 ```cmd
 diskpart
 ```
 
 
-#### Выберите том Windows телефона
+#### Выберите том Windows на телефоне
 > Используйте `list volume` чтобы найти его, он называется "WINVAYU"
 
 ```diskpart
@@ -161,36 +159,35 @@ select volume <number>
 remove letter y
 ```
 
-#### Выйти из diskpart
+#### Выйдите из diskpart
 ```diskpart
 exit
 ```
 
-## Запуститесь в Windows
+## Запуск Windows
 
-### Переместите `<uefi.img>` файл на телефон
+### Переместите файл `<uefi.img>` на телефон
 
 ```cmd
 adb push <uefi.img> /sdcard
 ```
 
-#### Если у вас есть карта памяти то используйте
+#### Если у вас есть карта памяти, то используйте
 
 ```cmd
 adb push <uefi.img> /external_sd
 ```
 
 
-### Сделайте бекап вашего основного образа
-> Надо сделать **1 РАЗ!!!**
+### Сделайте бекап основного образа boot
 
 > Переместите его на карту памяти, если это возможно
 
 
-### Установите uefi образ через TWRP
-Перейдите в `uefi.img` файл и установите его в TWRP
+### Установите образ uefi через TWRP
+Откройте файл `uefi.img` файл в TWRP и прошейте его в раздел boot
 
-## Запуститесь в Android
-> Используйте ваше бекап образ через TWRP
+## Запуск Android
+> Используйте ранее сохраненный образ (прошейте его обратно)
 
 ## Готово!
