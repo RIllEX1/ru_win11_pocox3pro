@@ -9,13 +9,13 @@
 
 *(Русский - Переведено NxORi / aka: RIllEX, !. (telegram - @chichus))*
 
-## ⚠️ Предупреждение (ОБЯЗАТЕЛЬНО)
+## ⚠️ Предупреждение
 
-Мы не несем ответственности за сломанные устройства, отсутствующие разделы рекавери, ксяомивская мертвая линяя ~~работников~~ ковбоев на фабрике, мертвые карты памяти, мертвые схемы управления питанием, мертвая ОЗУ, мертвые контроллеры экрана, мертвые процессоры, любые махинации с xiaomi/poco, мертвые кошки и собаки, ядерные войны или вы будете уволены за то что вы забыли загрузиться обратно в Android для будильника.
+Мы не несем ответственности за сломанные устройства, отсутствующие разделы, плохих работников на линии производства xiaomi, мертвые карты памяти, мертвые чипы управления питанием, мертвую ОЗУ, мертвые контроллеры экрана, мертвые процессоры, мертвых кошек и собак и ядерные войны.
 
-Проект на ранней стадии в данный момент, все файлы были получены от пользователей, здесь вы получаете рабочую инструкцию, с файлами в комплектации. Это хрупкий процесс, делайте это на ваш риск, и если вы хотите получить рабочую Windows на вашем устройстве, соблюдайте все шаги правильно.
+Установка Windows - опасный процесс, делайте это на свой страх и риск и осторожно следуйте инструкции.
 
-**ЕСЛИ ВЫ БЕСПОКОИТЕСЬ ЗА МОДИФИКАЦИЮ ВАШЕГО ТЕЛЕФОНА ИЛИ ЕГО РАЗМЕЩЕНИЮ ТАБЛИЦЫ ХРАНИЛИЩА ИЛИ ВЫ БОИТЕСЬ СЛОМАТЬ СВОЙ ТЕЛЕФОН - НЕМЕДЛЕННО ВЫЙДИТЕ ОТСЮДА!!! ВЫ БЫЛИ ПРЕДУПРЕЖДЕНЫ, ВЫ НА ВАШЕЙ ОТВЕСТВЕННОСТИ ЗА ТО ЧТО ВЫ РЕШИЛИ МОДИФИЦИРОВАТЬ ВАШ ТЕЛЕФОН!!! ВЫ БЫЛИ ПРЕДУПРЕЖДЕНЫ!!!**
+**ЕСЛИ ВЫ БОИТЕСЬ МОДИФИЦИРОВАТЬ СВОЙ ТЕЛЕФОН ИЛИ БОИТЕСЬ ЕГО СЛОМАТЬ - НЕМЕДЛЕННО ПРЕКРАТИТЕ ЧИТАТЬ!!! ВЫ БЫЛИ ПРЕДУПРЕЖДЕНЫ, В СЛУЧАЕ ПОЛОМКИ ОТВЕТСТВЕННОСТЬ ЛЕЖИТ НА ВАС!!! ВЫ БЫЛИ ПРЕДУПРЕЖДЕНЫ!!!**
 
 
 ## Начало
@@ -29,15 +29,15 @@
 
 ## Дополнительное
 
-- [Установка ДуалБут](guide/dualboot-ru.md)
+- [Настройка dualboot](guide/dualboot-ru.md)
 
-- [Опциональные вещи для установки](guide/postinstall-ru.md)
+- [Опциональные действия после установки](guide/postinstall-ru.md)
 
 - [Инструкция по обновлению драйверов](guide/update-ru.md)
 
 - [Инструкция по удалению](guide/uninstall-ru.md)
 
-## Создатели
+## Внесли вклад в проект:
 
 [<img alt="adomerlee" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109386069?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/adomerlee)
 [<img alt="Morc" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/13377926?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/TheMorc)
@@ -58,4 +58,4 @@
 [<img alt="KuatoDev" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/17999613?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/KuatoDev)
 [<img alt="belomaxorka" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/54049465?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/belomaxorka)
 [<img alt="nedokaka" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/104865210?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/nedokaka)
-
+[<img alt="RIllEX1" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/142384494?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/RIllEX1)
