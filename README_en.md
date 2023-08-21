@@ -20,22 +20,22 @@ This project is in an early stage, all the files here have been contributed by o
 
 ## Get Started
 
-- [Project status](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/status-en.md)
+- [Project status](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/status-en.md)
 
-- [Installation instructions](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/install-1-en.md)
+- [Installation instructions](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/install-1-en.md)
 
-- [Troubleshooting](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/troubleshooting-en.md)
+- [Troubleshooting](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/troubleshooting-en.md)
 
 
 ## Miscellaneous
 
-- [Dualboot setup](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/dualboot-en.md)
+- [Dualboot setup](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/dualboot-en.md)
 
-- [Optional post-install stuff](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/postinstall-en.md)
+- [Optional post-install stuff](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/postinstall-en.md)
 
-- [Driver updating instructions](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/update-en.md)
+- [Driver updating instructions](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/update-en.md)
 
-- [Uninstall instructions](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/guide/uninstall-en.md)
+- [Uninstall instructions](https://github.com/woa-vayu/Port-Windows-11-POCO-X3-Pro/tree/main/guide/uninstall-en.md)
 
 ## Contributors
 
